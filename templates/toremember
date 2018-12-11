@@ -1,0 +1,18 @@
+1. To pass data from pyhton to js using flask, use the 2nd parameter in render_template
+2. To collect data in js use 
+	var name = '{{name}}'; 
+	'{{name}}' qoutes are important in js
+	To access the same in html we use {{name}}
+3. Once js has an array to use it in html we use "document.getElementById("id").innerHTML" or with a script tag where ever need we use document.write(var_name);
+4. For this the HTML document must be ready first, so we need to write the script at the end of body tag or use $(document).ready(); function
+5. When passing a python dictionary it is passed as a string, which needs to be converted into json object using 
+	var name = '{{name|tojson}}'; 
+	or same can be done using josn.dumps(name) in pyhton
+6. Still it is an string in js, we need to convert it into object so use JSON.parse();
+7. To pass a list of dictionary, we use the same method and to refer to it we use var_name[][], 1st [] indictes which dictionary in the list, 2nd indicates the key value pair
+
+
+
+
+
+If a button is pressed then displaying pop and running background code and all how to do it

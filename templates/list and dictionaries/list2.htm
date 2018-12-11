@@ -1,0 +1,157 @@
+<html>
+<head>
+  <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../../static/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style>
+
+ h3
+ {
+  background-color:#262626;
+  text-align:center;
+  color:white;
+  margin-top:0%;
+  padding:5px;
+ }
+/* body
+ {
+  overflow-y:hidden;
+ }*/
+textarea#styled {
+	width: 74.2%;
+	height: 75%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+        resize:none;
+        margin-top:0.6%;
+        
+}
+
+
+button
+{
+  background-color: #696969;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   /* font-size: 18px;*/
+    margin: 6px 12px;
+    cursor: pointer;
+    margin-left: 25%;
+     border-radius: 9px;
+    position:absolute;
+     margin-top:-2%;
+}
+.butt
+{
+  background-color: #696969;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   /* font-size: 18px;*/
+    /*margin: 1px 12px;*/
+    cursor: pointer;
+    margin-left: 1%;
+     border-radius: 9px;
+    position:absolute;
+    margin-top:-5.5%;
+}
+.butto
+{
+  background-color: #696969;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   /* font-size: 18px;*/
+   /* margin: 6px 6px;*/
+    cursor: pointer;
+    margin-left: 47%;
+     border-radius: 9px;
+    position:absolute;
+    margin-top:-2%;
+}
+
+.f
+{
+  padding:40px;
+  background-color:#262626;
+  margin-top:8%;
+  
+}
+.card
+{
+/* margin-top:0%;*/
+ z-index:-999;
+}
+.ce
+{
+ margin-top:-3%;
+ 
+ 
+}
+</style>
+</head>
+<body>
+  
+  <div class="row">
+  
+  <h3>E-Learning</h3>
+   <a href="#" class="butt" style="font-size:20px;">Back</a>
+  
+  </div>
+  <div class="row">
+    <div class="ce">
+      <div class="col l3 s12 m5">
+         <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Python Lists and Dictionaries</span>
+              <p>
+                <b style="font-size:25px;">Access by Index</b><br><br>
+
+            You can access an individual item on the list by its index. An index is like an address that identifies the item's place in the list. The index appears directly after the list name, in between brackets, like this: list_name[index]<br><b>List indices begin with 0, not 1!</b>You access the first item in a list like this: list_name[0]. The second item in a list is at index 1: list_name[1]. <br><br><i>Instructions</i><br>Write a statement that prints the result of adding the second and fourth items of the list. Make sure to access the list by index!
+</p>
+            </div>
+            
+          </div>
+       </div>
+    </div>
+    <div class="l8 s12 m7">
+    <form action="/python_tut_01" method="post">
+       <textarea name="code" id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')">numbers = [5, 6, 7, 8]
+
+print "Adding the numbers at indices 0 and 2..."
+print numbers[0] + numbers[2]
+print "Adding the numbers at indices 1 and 3..."
+# Your code here!</textarea>
+        <div class="f">
+        
+            <button style="font-size:20px;">Save & submit code</button>
+        </div>
+    </form>
+      
+    </div>
+    
+   
+  </div>
+   
+</body>
+</html>
+

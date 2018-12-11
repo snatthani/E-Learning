@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/css/materialize.css">
+ <script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script> 
+  <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />-->
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  <script>
+function validateform() {
+    if (document.myForm.name.value == "") {
+        alert("Enter a valid name");
+        document.myForm.name.focus();
+        return false;
+    }
+    if (!/^[a-zA-Z]*$/g.test(document.myForm.name.value)) {
+        alert("Invalid characters");
+        document.myForm.name.focus();
+        return false;
+    }
+    if (document.myForm.email.value == "") {
+        alert("Please enter an email");
+        document.myForm.email.focus();
+        return false;
+    }
+}
+</script>
+<style>
+h3
+{
+ background-color:#262626;
+ font-family:"Times New Roman";
+ 
+ padding:2px;
+ margin-top:1%;
+ color:white;
+}
+#myBtn,#myBbtn
+{
+    cursor: pointer;
+    text-decoration: none;
+    font-family:'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 10px;
+    display: block;
+    margin-right: 30px;
+    padding: 50px 70px 50px 70px;
+}
+#myBbtn
+
+{
+     cursor: pointer;
+    text-decoration: none;
+    font-family:'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 10px;
+    display: block;
+    margin-right: 15px;
+    padding: 50px 70px 50px 70px;
+   
+}
+.adj
+{
+    width:70%;
+    margin-left: 50%;
+}
+.butto
+{
+  background-color: #696969;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 6px 12px;
+    cursor: pointer;
+    margin-left: 35%;
+     border-radius: 9px;
+}
+
+/*.card:hover 
+{
+box-shadow: 0 20px 20px 0 rgba(0,0,0,0.7);
+opacity:1;
+}*/
+/*.card1
+{
+    width:60%;
+    margin-left: 30%;
+}*/
+
+ .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+  /* .input-field input[type=text]:focus + label {
+     color: #000;
+   }*/
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+     
+
+   }
+   .input-field input[type=email]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+     
+   }
+
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+     
+   }
+   .input-field input[type=password]:focus{
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+     
+   }
+
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+      
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+     
+   }
+   .fo
+   {
+     margin-left:30%;
+
+
+   }
+   .tx
+   {
+     font-family:"Times New Roman";
+     margin-left:60%;
+     font-size:20px;
+    
+   } 
+ body
+ {
+   background-color:#262626;
+   
+ }   
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+}
+
+
+.modal-content
+{
+position: relative;
+background-color: #fefefe;
+margin: auto;
+padding: 0;
+border: 1px solid #888;
+width: 80%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 1s;
+animation-name: animatetop;
+animation-duration: 1s
+margin-top:2%;
+}
+/*@-webkit-keyframes animatetop
+{
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+@keyframes animatetop 
+{
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}*/
+
+/* The Close Button */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+#email
+{
+	margin-top: -4%;
+}
+.modal
+{
+	margin:top:0%;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="#">E-Learning</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href="#banner">Homepage</a></li>
+                    <li><a href="#page">About Us</a></li>
+                    <li><a href="#featured-content">Tutorials</a></li>
+                    <li id="myBtn">Sign Up</li>
+                    <li id="myBbtn">Login</li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="content">
+                <div><img src="../static/images/img01.jpg" width="1000" height="400" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div id="page">
+        <div class="post">
+            <h2 class="title"><a href="#">Welcome to E-learning </a></h2>
+            <div class="entry">
+                <p>This is <strong>E-learning</strong>, a platform for practice, competition and improvement for both students and professional software developers that helps them to test and improve their programming skills. We provide tutorials for students to learn and a place where students can compete with each other by earning points.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end #page --> 
+    <div id="featured-content">
+        <div id="column1">
+            <h2>Python</h2>
+            <p><img src="../static/images/python.png" width="300" height="150" alt="" /></p>
+            <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+
+        </div>
+        <div id="column2">
+            <h2>Java</h2>
+            <p><img src="../static/images/java_logo2.png" width="300" height="150" alt="" /></p>
+            <p>Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.</p>
+        </div>
+        <div id="column3">
+            <h2>C++</h2>
+            <p><img src="../static/images/cpp.png" width="300" height="150" alt="" /></p>
+            <p>C++ is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.</p>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <p>&copy; E-learing. All rights reserved.</p>
+</div>
+ <!--<div class="row">
+ <div class="col l12 s12 m12">
+ <h3>E-Learning</h3>
+ </div>
+ </div>
+  <div class="row">
+    <div class="col s12 m7">
+      <p id="tx">Sign Up</p>
+    </div>
+ </div>-->
+
+
+<!-- Trigger/Open The Modal -->
+<!--<button id="myBtn">Open Modal</button>-->
+
+<!-- The Modal -->
+<div class="row">
+  <div id="myModal" class="modal">
+   <div class="fo">
+    <form name="myForm" action="/signup" method="post" onsubmit="return validateform();" class="col s7">
+      <div class="card darken-1">
+      <div class="row">
+
+       <div class="row">
+        <div class="input-field col s12">
+
+          <input id="name" type="text" class="validate" name="name">
+          <label for="name">Name</label>
+        </div>
+      </div>
+
+     
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate" name="pass">
+          <label for="password">Password</label>
+        </div>
+      
+      
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate" name="con_pass">
+          <label for="password">Confirm Password</label>
+        </div>
+      </div>
+       <div class="row">
+          <!--<button style="font-size:20px;">Sign Up</button>-->
+
+          
+          <input type="submit" value="Sign Up" class="butto">
+        </div>
+       </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+   <div class="fo">
+    <div id="mylModal" class="modal">
+    <form class="col s7" action="/login" method="post">
+      <div class="adj">
+      <div class="card darken-1">
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="pass">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+  </div>
+  <input type="submit" value="Log In" class="butto">
+     </div>
+     </div>
+    </form>
+  </div>
+</div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+/*var modal = document.getElementById('mylModal');*/
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+/*var bbtn=document.getElementById("myBbtn");*/
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+/*bbtn.onclick = function() {
+    modal.style.display = "block";
+}*/
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+// Get the modal
+var modall = document.getElementById('mylModal');
+
+// Get the button that opens the modal
+var bbtn = document.getElementById("myBbtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+bbtn.onclick = function() {
+    modall.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

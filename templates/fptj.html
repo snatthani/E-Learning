@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<body>
+	<h1 id="question"></h1>
+	<script> 
+		var name = '{{name|tojson}}';
+		alert(typeof name);
+		var key = JSON.parse(name);
+		alert(typeof key);
+		document.getElementById("question").innerHTML = name;
+	</script>
+	<p>Hello <script type="text/javascript">document.write(key[0]["spam"])</script></p>
+</body>
+</html>

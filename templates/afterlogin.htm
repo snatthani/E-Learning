@@ -1,0 +1,127 @@
+<html>
+<head>
+ <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style>
+ .card
+  {
+   /* height:60%;
+    width:40%;*/
+    margin-left:15%;
+    margin-top:1%;   
+    margin-right:15%;
+
+  }
+  #ch
+  {
+    background-color:#262626;
+    font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  color: #CFCFCF;
+  font-size:3em;
+  }
+ /* .cr3
+  {
+   height:30%;
+  }*/
+ body
+ {
+   background-color:#262626;
+   overflow-y: hidden;
+}
+.butto
+{
+  background-color: #696969;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 6px 12px;
+    cursor: pointer;
+    float:right;
+     border-radius: 9px;
+     margin-top:-8%;
+}
+.na{
+	margin-top : -3%;
+}
+</style>
+</head>
+<body>
+   <div class="row">
+     <div class="col l12 s12 m12">
+     <div class = "na">
+      <p id="ch">Welcome {{name}}</p>
+       <a href="/logout" class="butto" style="font-size:20px;">Log Out</a>
+     </div>
+     </div>
+   </div>
+     <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+   <div class="row">
+        <div class="col s12 m7 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../static/images/python.png">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <p>Python is a widely used high-level,interpreted, dynamic language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code.</p>
+            </div>
+            <div class="card-action">
+              <form action="/python" method="post">
+              		<input type="submit" name="Python" value = "Get Started"/>
+                </form>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m7 l4">
+          <div class="card">
+            <div class="cr3">
+            <div class="card-image">
+              <img src="../static/images/java_logo2.png">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <p>Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.<br><br></p>
+            </div>
+            <div class="card-action">
+             <form action="" method="post">
+              		<input type="submit" name="Java" value = "Get Started"/>
+             </form>
+            </div>
+          </div>
+          </div>
+        </div>
+         <div class="col s12 m7 l4">
+          <div class="card">
+            <div class="cr2">
+            <div class="card-image">
+              <img src="../static/images/cpp.png">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <p>C++ is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.<br><br></p>
+            </div>
+            <div class="card-action">
+              <form action="" method="post">
+              		<input type="submit" name="Cpp" value = "Get Started"/>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
